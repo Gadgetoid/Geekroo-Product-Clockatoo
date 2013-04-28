@@ -5,11 +5,12 @@ import datetime
 from Raspi_7Segment import SevenSegment
 
 # ===========================================================================
-# Clock Example
+# Clockatoo - Clock Example
 # ===========================================================================
 segment = SevenSegment(address=0x70)
 
 print "Press CTRL+Z to exit"
+segment.writeTextString('welcome to clockatoo - press ctrl-z to exit',0.2)
 
 # Continually update the time on a 4 char, 7-segment display
 while(True):
