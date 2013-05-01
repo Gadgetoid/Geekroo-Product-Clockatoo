@@ -10,6 +10,6 @@ with open('/proc/uptime', 'r') as f:
 	uptime_string = str(timedelta(seconds = uptime_seconds))
 
 from Raspi_7Segment import SevenSegment
-seg = SevenSegment(0x70,True)
-seg.writeTextString('hello world',0.2)
-seg.writeTextString('uptime ' + uptime_string,0.2)
+segment = SevenSegment(address=0x70)
+segment.writeTextString('hello world',0.2)
+segment.writeTextString('uptime ' + uptime_string,0.2)
